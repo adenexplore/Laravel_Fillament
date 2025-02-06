@@ -64,3 +64,89 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Tutorial Clone, Update Composer, Migrate, dan Menggunakan Filament di Laravel
+
+## 1. Clone Repository Laravel
+Jika proyek berada di GitHub atau GitLab, kamu bisa mengkloningnya dengan perintah berikut:
+```sh
+# Ganti URL dengan repository proyek Laravel kamu
+git clone https://github.com/username/nama-repository.git
+
+# Masuk ke direktori proyek
+cd nama-repository
+```
+
+## 2. Install Dependencies dengan Composer
+Pastikan kamu memiliki **Composer** terinstall di sistem. Jalankan perintah berikut untuk menginstall semua dependensi Laravel:
+```sh
+composer install
+```
+Jika ada perubahan pada dependensi dan ingin memperbarui, gunakan:
+```sh
+composer update
+```
+
+## 3. Konfigurasi Environment
+Salin file `.env.example` menjadi `.env` jika belum ada:
+```sh
+cp .env.example .env
+```
+Kemudian, buka file `.env` dan sesuaikan konfigurasi database:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+## 4. Generate Key Aplikasi Laravel
+```sh
+php artisan key:generate
+```
+
+## 5. Migrate Database
+Jalankan perintah berikut untuk membuat tabel di database:
+```sh
+php artisan migrate
+```
+Jika terdapat seeding data, jalankan:
+```sh
+php artisan db:seed
+```
+
+## 6. Install dan Konfigurasi Filament
+Filament adalah admin panel untuk Laravel. Jika belum terinstall, jalankan perintah berikut:
+```sh
+composer require filament/filament
+```
+Setelah instalasi, buat admin panel dengan menjalankan perintah:
+```sh
+php artisan make:filament-user
+```
+Masukkan email dan password untuk admin panel.
+
+## 7. Menjalankan Server Laravel
+Untuk menjalankan aplikasi Laravel, gunakan perintah berikut:
+```sh
+php artisan serve
+```
+Akses aplikasi melalui browser di:
+```
+http://127.0.0.1:8000
+```
+
+Untuk mengakses admin panel Filament, gunakan URL berikut:
+```
+http://127.0.0.1:8000/admin
+```
+Login dengan akun yang telah dibuat pada langkah sebelumnya.
+
+---
+
+Dengan mengikuti langkah-langkah ini, kamu bisa meng-clone, mengatur, dan menjalankan project Laravel yang menggunakan Filament dengan mudah!
+
+
