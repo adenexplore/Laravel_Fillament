@@ -65,12 +65,20 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+<<<<<<< HEAD
 # Tutorial Clone, Update Composer, Migrate, dan Menggunakan Filament di Laravel
 
 ## 1. Clone Repository Laravel
 
 Jika proyek berada di GitHub atau GitLab, kamu bisa mengkloningnya dengan perintah berikut:
 
+=======
+
+# Tutorial Clone, Update Composer, Migrate, dan Menggunakan Filament di Laravel
+
+## 1. Clone Repository Laravel
+Jika proyek berada di GitHub atau GitLab, kamu bisa mengkloningnya dengan perintah berikut:
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```sh
 # Ganti URL dengan repository proyek Laravel kamu
 git clone https://github.com/username/nama-repository.git
@@ -80,6 +88,7 @@ cd nama-repository
 ```
 
 ## 2. Install Dependencies dengan Composer
+<<<<<<< HEAD
 
 Pastikan kamu memiliki **Composer** terinstall di sistem. Jalankan perintah berikut untuk menginstall semua dependensi Laravel:
 
@@ -89,11 +98,19 @@ composer install
 
 Jika ada perubahan pada dependensi dan ingin memperbarui, gunakan:
 
+=======
+Pastikan kamu memiliki **Composer** terinstall di sistem. Jalankan perintah berikut untuk menginstall semua dependensi Laravel:
+```sh
+composer install
+```
+Jika ada perubahan pada dependensi dan ingin memperbarui, gunakan:
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```sh
 composer update
 ```
 
 ## 3. Konfigurasi Environment
+<<<<<<< HEAD
 
 Salin file `.env.example` menjadi `.env` jika belum ada:
 
@@ -103,6 +120,13 @@ cp .env.example .env
 
 Kemudian, buka file `.env` dan sesuaikan konfigurasi database:
 
+=======
+Salin file `.env.example` menjadi `.env` jika belum ada:
+```sh
+cp .env.example .env
+```
+Kemudian, buka file `.env` dan sesuaikan konfigurasi database:
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -113,12 +137,16 @@ DB_PASSWORD=
 ```
 
 ## 4. Generate Key Aplikasi Laravel
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```sh
 php artisan key:generate
 ```
 
 ## 5. Migrate Database
+<<<<<<< HEAD
 
 Jalankan perintah berikut untuk membuat tabel di database:
 
@@ -128,11 +156,19 @@ php artisan migrate
 
 Jika terdapat seeding data, jalankan:
 
+=======
+Jalankan perintah berikut untuk membuat tabel di database:
+```sh
+php artisan migrate
+```
+Jika terdapat seeding data, jalankan:
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```sh
 php artisan db:seed
 ```
 
 ## 6. Install dan Konfigurasi Filament
+<<<<<<< HEAD
 
 Filament adalah admin panel untuk Laravel. Jika belum terinstall, jalankan perintah berikut:
 
@@ -158,18 +194,47 @@ php artisan serve
 
 Akses aplikasi melalui browser di:
 
+=======
+Filament adalah admin panel untuk Laravel. Jika belum terinstall, jalankan perintah berikut:
+```sh
+composer require filament/filament
+```
+Setelah instalasi, buat admin panel dengan menjalankan perintah:
+```sh
+php artisan make:filament-user
+```
+Masukkan email dan password untuk admin panel.
+
+## 7. Menjalankan Server Laravel
+Untuk menjalankan aplikasi Laravel, gunakan perintah berikut:
+```sh
+php artisan serve
+```
+Akses aplikasi melalui browser di:
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 ```
 http://127.0.0.1:8000
 ```
 
 Untuk mengakses admin panel Filament, gunakan URL berikut:
+<<<<<<< HEAD
 
 ```
 http://127.0.0.1:8000/admin
 ```
 
+=======
+```
+http://127.0.0.1:8000/admin
+```
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
 Login dengan akun yang telah dibuat pada langkah sebelumnya.
 
 ---
 
 Dengan mengikuti langkah-langkah ini, kamu bisa meng-clone, mengatur, dan menjalankan project Laravel yang menggunakan Filament dengan mudah!
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0bfa8083d9150adf31b11992a121a2e6c7e8494f
